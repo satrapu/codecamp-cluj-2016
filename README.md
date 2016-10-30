@@ -1,1 +1,1 @@
-# codecamp-cluj-2016
+# Codecamp - Cluj-Napoca - 2016
