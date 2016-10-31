@@ -12,7 +12,7 @@ This repo contains the source code of a JEE 7 web application to be used during 
 
 <a name="ci">Continuous Integration</a>
 --
-TBD
+* drone.io: [![Build Status](https://drone.io/github.com/satrapu/codecamp-cluj-2016/status.png)](https://drone.io/github.com/satrapu/codecamp-cluj-2016/latest)
 
 <a name="live-application">Live Application</a>
 -- 
