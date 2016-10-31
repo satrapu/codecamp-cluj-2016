@@ -20,8 +20,25 @@ TBD
 
 <a name="references">References</a>
 --
-TBD
-
+* Official Site: https://www.heroku.com/home
+  * Pricing: https://www.heroku.com/pricing
+  * Heroku Architecture: https://devcenter.heroku.com/categories/heroku-architecture
+  * Limits: https://devcenter.heroku.com/articles/limits  
+  * Elements: https://elements.heroku.com/
+  * Heroku CLI: https://devcenter.heroku.com/categories/command-line
+  * Buildpacks: https://devcenter.heroku.com/articles/buildpacks
+  * Deployment: https://devcenter.heroku.com/categories/deployment
+  * Pipelines: https://devcenter.heroku.com/articles/pipelines 
+  * Error Codes: https://devcenter.heroku.com/articles/error-codes  
+  * Java on Heroku: https://devcenter.heroku.com/categories/java  
+    * Customize Maven: https://github.com/heroku/heroku-buildpack-java#customize-maven
+    * Heroku Java Support: https://devcenter.heroku.com/articles/java-support  
+    * Troubleshooting Memory Issues in Java Applications: https://devcenter.heroku.com/articles/java-memory-issues  
+  * PostgreSQL: https://devcenter.heroku.com/categories/heroku-postgres
+    * Connecting in Java: https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-java
+* Alternatives:
+    * Red Hat OpenShift: https://www.openshift.com/  
+    * Others
 <a name="heroku-cli-commands">Useful Heroku CLI commands</a>
 --
 TBD
