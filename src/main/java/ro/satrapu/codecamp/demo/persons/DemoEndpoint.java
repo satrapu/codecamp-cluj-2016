@@ -19,6 +19,9 @@ public class DemoEndpoint extends HttpServlet {
     @Inject
     private PersonPersistenceService personPersistenceService;
 
+    @Inject
+    private EnvironmentProvider environmentProvider;
+
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -67,6 +70,7 @@ public class DemoEndpoint extends HttpServlet {
             printWriter.println("</head>");
             printWriter.println("<body>");
             printWriter.println("<h1>DemoEndpoint</h1>");
+            printWriter.println(String.format("<h2>PIPELINE_STAGE=%s</h2>", environmentProvider.getPipelineStage()));
 
             writeInfo(getRequestInfo(request), printWriter);
             writePersons(personPersistenceService.getPersons(), printWriter);
