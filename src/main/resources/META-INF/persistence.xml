@@ -10,9 +10,5 @@
         <class>ro.satrapu.codecamp.demo.persons.Person</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <validation-mode>CALLBACK</validation-mode>
-        <properties>
-            <property name="javax.persistence.schema-generation.database.action"
-                      value="drop-and-create"/>
-        </properties>
     </persistence-unit>
 </persistence>
