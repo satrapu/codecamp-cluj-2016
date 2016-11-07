@@ -61,8 +61,9 @@
         <version.maven-war-plugin>2.6</version.maven-war-plugin>
         <version.maven-enforcer-plugin>1.4.1</version.maven-enforcer-plugin>
         <version.wildfly.swarm>2016.10.0</version.wildfly.swarm>
+        <version.flyway>2.3.1</version.flyway>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <environment>none</environment>
+        <environment>local</environment>
     </properties>
 
     <dependencyManagement>
@@ -103,6 +104,12 @@
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>undertow</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.flyway</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>${version.flyway}</version>
         </dependency>
     </dependencies>
 
@@ -265,7 +272,6 @@
                         <groupId>org.wildfly.swarm</groupId>
                         <artifactId>wildfly-swarm-plugin</artifactId>
                         <version>${version.wildfly.swarm}</version>
-
                         <executions>
                             <execution>
                                 <goals>
