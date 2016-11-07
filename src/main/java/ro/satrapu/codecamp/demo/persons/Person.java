@@ -3,10 +3,8 @@ package ro.satrapu.codecamp.demo.persons;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
@@ -19,20 +17,13 @@ public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     @Column(name = "Id")
     private Integer id;
-
-    @Version
-    @Column(name = "Version")
-    private Integer version;
 
     @NotNull
     @Column(name = "FirstName", nullable = false)
     private String firstName;
-
-    @Column(name = "MiddleName")
-    private String middleName;
 
     @NotNull
     @Column(name = "LastName", nullable = false)
@@ -46,28 +37,12 @@ public class Person implements Serializable {
         this.id = id;
     }
 
-    public Integer getVersion() {
-        return version;
-    }
-
-    private void setVersion(Integer version) {
-        this.version = version;
-    }
-
     public String getFirstName() {
         return firstName;
     }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
     }
 
     public String getLastName() {

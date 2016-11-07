@@ -145,8 +145,8 @@ public class DemoEndpoint extends HttpServlet {
             printWriter.println("<tr>");
 
             printWriter.println(String.format("<td>%d</td>", person.getId()));
-            printWriter.println(String.format("<td>%s %s %s</td>",
-                    person.getFirstName(), person.getMiddleName(), person.getLastName()));
+            printWriter.println(String.format("<td>%s %s</td>",
+                    person.getFirstName(), person.getLastName()));
 
             printWriter.println("</tr>");
         }
