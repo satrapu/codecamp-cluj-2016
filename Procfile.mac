@@ -1,2 +1,2 @@
-web: java -jar -Dswarm.http.port=$PORT -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=9999 target/heroku-jee-ci-cd-swarm.jar
+web: java -jar -Dswarm.http.port=$PORT -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=9999 target/heroku-jee-ci-cd-swarm.jar
 
