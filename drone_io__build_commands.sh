@@ -25,12 +25,12 @@ echo "MAVEN_DOWNLOAD_HOME=$MAVEN_DOWNLOAD_HOME"
 ### -p: will create all folders present in the specified path, if they do not exist already
 echo "Creating Maven home folder ..."
 sudo mkdir -p $MAVEN_DOWNLOAD_HOME
-echo "Creating Maven home folder ..."
+echo "Maven home folder has been created"
 
 # download Maven archive from public domain
 ## "wget" command options:
 ### -nv: will generate a smaller amount of output
-echo "Preparing to download Maven ..."
+echo "Downloading Maven ..."
 wget $MAVEN_DOWNLOAD_URL -nv
 echo "Maven has been downloaded"
 
@@ -39,7 +39,9 @@ echo "Maven has been downloaded"
 ### x: extracts files and folders from the archive
 ### f: specifies the current archive file
 ### -C <FOLDER>: will extract the archive to the folder identified by "<FOLDER>"
+echo "Extracting Maven archive ..."
 sudo tar xf apache-maven-$MAVEN_VERSION-bin.tar.gz -C $MAVEN_DOWNLOAD_HOME
+echo "Maven archive has been extracted"
 
 # add the name of the folder where Maven has been downloaded to
 MAVEN_HOME=$MAVEN_DOWNLOAD_HOME/$(ls $MAVEN_DOWNLOAD_HOME)
@@ -49,4 +51,6 @@ echo "Maven has been installed into folder: $MAVEN_HOME"
 ## "maven" command options:
 ### -q: show only error messages
 ### -P<MAVEN_PROFILE_NAME>: use Maven profile identified by <MAVEN_PROFILE_NAME>
+echo "Building application using Maven profile: $MAVEN_PROFILE ..."
 $MAVEN_HOME/bin/mvn -q package -P$MAVEN_PROFILE
+echo "Application has been built"
