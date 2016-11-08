@@ -1,9 +1,9 @@
 # Maven generated artifacts
-target
+/target
 
 # IntelliJ IDEA generated artifacts
-.idea
-*.iml
+/.idea
+/*.iml
 
 # Heroku
-.env
+/.env
