@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+
 import java.io.Serializable;
 
 /**
@@ -14,42 +15,42 @@ import java.io.Serializable;
 @Entity
 @Table(name = "Persons")
 public class Person implements Serializable {
-    private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue
-    @Column(name = "Id")
-    private Integer id;
+  @Id
+  @GeneratedValue
+  @Column(name = "Id")
+  private Integer id;
 
-    @NotNull
-    @Column(name = "FirstName", nullable = false)
-    private String firstName;
+  @NotNull
+  @Column(name = "FirstName", nullable = false)
+  private String firstName;
 
-    @NotNull
-    @Column(name = "LastName", nullable = false)
-    private String lastName;
+  @NotNull
+  @Column(name = "LastName", nullable = false)
+  private String lastName;
 
-    public Integer getId() {
-        return id;
-    }
+  public Integer getId() {
+    return id;
+  }
 
-    private void setId(Integer id) {
-        this.id = id;
-    }
+  private void setId(Integer id) {
+    this.id = id;
+  }
 
-    public String getFirstName() {
-        return firstName;
-    }
+  public String getFirstName() {
+    return firstName;
+  }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-    public String getLastName() {
-        return lastName;
-    }
+  public String getLastName() {
+    return lastName;
+  }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
 }
