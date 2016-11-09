@@ -1,4 +1,4 @@
-package ro.satrapu.codecamp.demo.persons;
+package ro.satrapu.codecamp.demo;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

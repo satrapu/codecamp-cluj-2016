@@ -1,4 +1,4 @@
-package ro.satrapu.codecamp.demo.persons;
+package ro.satrapu.codecamp.demo;
 
 import org.flywaydb.core.Flyway;
 

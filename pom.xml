@@ -230,7 +230,7 @@
                 Ensure the custom WildFly Swarm container is started (i.e. the one containing a
                 datasource pointing to a Heroku managed database).
               -->
-              <mainClass>ro.satrapu.codecamp.demo.persons.HerokuRunner</mainClass>
+              <mainClass>ro.satrapu.codecamp.demo.HerokuRunner</mainClass>
             </configuration>
 
             <executions>
