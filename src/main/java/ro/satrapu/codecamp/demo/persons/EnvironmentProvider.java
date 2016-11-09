@@ -8,20 +8,18 @@ import javax.ejb.Singleton;
  */
 @Singleton
 public class EnvironmentProvider {
-    private static final String ENV_PIPELINE_STAGE = "PIPELINE_STAGE";
-    private String pipelineStage;
+  private static final String ENV_PIPELINE_STAGE = "PIPELINE_STAGE";
+  private String pipelineStage;
 
-    @PostConstruct
-    public void init() {
-        pipelineStage = System.getenv(ENV_PIPELINE_STAGE);
-    }
+  @PostConstruct
+  public void init() {
+    pipelineStage = System.getenv(ENV_PIPELINE_STAGE);
+  }
 
-    /**
-     * Gets the value of the {@value EnvironmentProvider#ENV_PIPELINE_STAGE} environment variable.
-     *
-     * @return
-     */
-    public String getPipelineStage() {
-        return pipelineStage;
-    }
+  /**
+   * Gets the value of the {@value EnvironmentProvider#ENV_PIPELINE_STAGE} environment variable.
+   */
+  public String getPipelineStage() {
+    return pipelineStage;
+  }
 }
