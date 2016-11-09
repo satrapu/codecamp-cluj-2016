@@ -13,21 +13,21 @@ import java.io.Serializable;
  * Represents a human being, happy to be present to a Codecamp event.
  */
 @Entity
-@Table(name = "Persons")
+@Table(name = "persons")
 public class Person implements Serializable {
   private static final long serialVersionUID = 1L;
 
   @Id
   @GeneratedValue
-  @Column(name = "Id")
+  @Column(name = "id")
   private Integer id;
 
   @NotNull
-  @Column(name = "FirstName", nullable = false)
+  @Column(name = "firstname", nullable = false)
   private String firstName;
 
   @NotNull
-  @Column(name = "LastName", nullable = false)
+  @Column(name = "lastname", nullable = false)
   private String lastName;
 
   public Integer getId() {
