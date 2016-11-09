@@ -24,7 +24,7 @@ import javax.sql.DataSource;
 @Startup
 @Singleton
 @TransactionManagement(TransactionManagementType.BEAN)
-public class DatabaseMigrationPerformer {
+public class DatabaseMigrationService {
   private static final String APPLICATION_PROPERTIES_FILE_NAME = "app.properties";
   private static final String JNDI_DATASOURCE_NAME = "jndi.datasource.name";
 
