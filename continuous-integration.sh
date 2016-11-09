@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# build commands for https://drone.io/github.com/satrapu/codecamp-cluj-2016
+# build script to be used by any *nix CI server
 # get MAVEN_VERSION or default value
 DEFAULT_MAVEN_VERSION=3.3.9
 MAVEN_VERSION=${MAVEN_VERSION-${DEFAULT_MAVEN_VERSION}}
