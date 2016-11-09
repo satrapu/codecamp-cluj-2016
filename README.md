@@ -16,13 +16,14 @@ This repo contains the source code of a JEE 7 web application to be used during 
 
 <a name="live-application">Live Application</a>
 -- 
-TBD
+https://codecamp-cluj-2016.herokuapp.com/
 
 <a name="references">References</a>
 --
-* Official Site: https://www.heroku.com/home
+* Heroku Cloud Application Platform
+  * Official Site: https://www.heroku.com/home
   * Pricing: https://www.heroku.com/pricing
-  * Heroku Architecture: https://devcenter.heroku.com/categories/heroku-architecture
+  * Architecture: https://devcenter.heroku.com/categories/heroku-architecture
   * Limits: https://devcenter.heroku.com/articles/limits  
   * Elements: https://elements.heroku.com/
   * Heroku CLI: https://devcenter.heroku.com/categories/command-line
@@ -34,11 +35,9 @@ TBD
     * Customize Maven: https://github.com/heroku/heroku-buildpack-java#customize-maven
     * Heroku Java Support: https://devcenter.heroku.com/articles/java-support  
     * Troubleshooting Memory Issues in Java Applications: https://devcenter.heroku.com/articles/java-memory-issues  
-  * PostgreSQL: https://devcenter.heroku.com/categories/heroku-postgres
+  * PostgreSQL on Heroku: https://devcenter.heroku.com/categories/heroku-postgres
     * Connecting in Java: https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-java
 * Alternatives:
     * Red Hat OpenShift: https://www.openshift.com/  
     * Others
-<a name="heroku-cli-commands">Useful Heroku CLI commands</a>
---
-TBD
+* TBD
