@@ -69,9 +69,14 @@ public class DemoEndpoint extends HttpServlet {
       printWriter.println("<body>");
       printWriter.println("<h1>Codecamp - Cluj-Napoca - 2016 - Demo</h1>");
       printWriter.println("<h2>DemoEndpoint</h2>");
-      printWriter.println(String.format("<h2>PIPELINE_STAGE=%s</h2>", environmentProvider.getPipelineStage()));
+      printWriter.println("<hr/>");
+
+      printWriter.println(String.format("<h3>PIPELINE_STAGE=%s</h3>", environmentProvider.getPipelineStage()));
+      printWriter.println("<hr/>");
 
       writeInfo(getRequestInfo(request), printWriter);
+      printWriter.println("<hr/>");
+
       writePersons(personPersistenceService.getPersons(), printWriter);
 
       printWriter.println("</body>");
@@ -109,7 +114,7 @@ public class DemoEndpoint extends HttpServlet {
    * @param printWriter The {@link PrintWriter} used for writing.
    */
   private void writeInfo(Map<String, String> info, PrintWriter printWriter) {
-    printWriter.println("<h2>Request info</h2>");
+    printWriter.println("<h3>Request info</h3>");
     printWriter.println("<ul>");
 
     for (Map.Entry<String, String> entry : info.entrySet()) {
@@ -128,7 +133,7 @@ public class DemoEndpoint extends HttpServlet {
    * @param printWriter The {@link PrintWriter} used for writing.
    */
   private void writePersons(List<Person> persons, PrintWriter printWriter) {
-    printWriter.println("<h2>Database records</h2>");
+    printWriter.println("<h3>Database records</h3>");
 
     printWriter.println("<table>");
 
