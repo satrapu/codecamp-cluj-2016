@@ -18,23 +18,22 @@ import javax.sql.DataSource;
 
 /**
  * Performs database migration via <a href="https://flywaydb.org/">Flyway</a>.
- * In order to avoid <a href="https://github.com/flyway/flyway/issues/324">this Flyway issue</a>, this bean
- * is managing the database transactions.
+ * This bean is managing database transactions in order to avoid
+ * <a href="https://github.com/flyway/flyway/issues/324">this Flyway issue</a>.
  */
 @Startup
 @Singleton
 @TransactionManagement(TransactionManagementType.BEAN)
 public class DatabaseMigrationPerformer {
-  private static final String APPLICATION_CONFIG_FILE_NAME = "app.properties";
-  private static final String PROPERTY_DATASOURCE_NAME = "datasource.name";
+  private static final String APPLICATION_PROPERTIES_FILE_NAME = "app.properties";
+  private static final String JNDI_DATASOURCE_NAME = "jndi.datasource.name";
 
   @PostConstruct
-  public void initialize() throws IOException, NamingException {
+  public void performDatabaseMigration() {
     //get the DataSource instance pointing to the underlying database
     Properties applicationProperties = getApplicationProperties();
     String dataSourceName = getDataSourceName(applicationProperties);
-    Context context = new InitialContext();
-    DataSource dataSource = getDataSource(context, dataSourceName);
+    DataSource dataSource = getDataSource(dataSourceName);
 
     // run database migration scripts
     Flyway flyway = new Flyway();
@@ -42,21 +41,28 @@ public class DatabaseMigrationPerformer {
     flyway.migrate();
   }
 
-  private Properties getApplicationProperties() throws IOException {
+  private Properties getApplicationProperties() {
     ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
-    try (InputStream inputStream = classLoader.getResourceAsStream(APPLICATION_CONFIG_FILE_NAME)) {
+    try (InputStream inputStream = classLoader.getResourceAsStream(APPLICATION_PROPERTIES_FILE_NAME)) {
       Properties applicationProperties = new Properties();
       applicationProperties.load(inputStream);
       return applicationProperties;
+    } catch (IOException e) {
+      throw new RuntimeException("Unable to read application properties", e);
     }
   }
 
   private String getDataSourceName(Properties properties) {
-    return (String) properties.get(PROPERTY_DATASOURCE_NAME);
+    return (String) properties.get(JNDI_DATASOURCE_NAME);
   }
 
-  private DataSource getDataSource(Context context, String dataSourceName) throws NamingException {
-    return (DataSource) context.lookup(dataSourceName);
+  private DataSource getDataSource(String dataSourceName) {
+    try {
+      Context context = new InitialContext();
+      return (DataSource) context.lookup(dataSourceName);
+    } catch (NamingException e) {
+      throw new RuntimeException(String.format("Unable to load datasource using name: %s", dataSourceName), e);
+    }
   }
 }
