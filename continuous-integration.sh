@@ -6,11 +6,6 @@ DEFAULT_MAVEN_VERSION=3.3.9
 MAVEN_VERSION=${MAVEN_VERSION-${DEFAULT_MAVEN_VERSION}}
 echo "MAVEN_VERSION=${MAVEN_VERSION}"
 
-# get MAVEN_DOWNLOAD_URL or default value
-DEFAULT_MAVEN_DOWNLOAD_URL=http://www-eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
-MAVEN_DOWNLOAD_URL=${MAVEN_DOWNLOAD_URL-${DEFAULT_MAVEN_DOWNLOAD_URL}}
-echo "MAVEN_DOWNLOAD_URL=${MAVEN_DOWNLOAD_URL}"
-
 # get MAVEN_PROFILE or default value
 DEFAULT_MAVEN_PROFILE=local
 MAVEN_PROFILE=${MAVEN_PROFILE-${DEFAULT_MAVEN_PROFILE}}
@@ -26,6 +21,9 @@ echo "MAVEN_DOWNLOAD_HOME=${MAVEN_DOWNLOAD_HOME}"
 echo "Creating Maven home folder ..."
 sudo mkdir -p ${MAVEN_DOWNLOAD_HOME}
 echo "Maven home folder has been created"
+
+# build the URL from where to download Maven
+MAVEN_DOWNLOAD_URL=http://www-eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
 
 # download Maven archive from public domain
 ## "wget" command options:
