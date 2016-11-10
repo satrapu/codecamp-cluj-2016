@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# build script to be used by any *nix CI server
+# build script to be used by any CI server running on a *nix OS, like Linux
 # get MAVEN_VERSION or default value
 DEFAULT_MAVEN_VERSION=3.3.9
 MAVEN_VERSION=${MAVEN_VERSION-${DEFAULT_MAVEN_VERSION}}
