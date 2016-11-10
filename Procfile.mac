@@ -1,5 +1,5 @@
 # run Heroku application locally on macOS via "heroku local -f Procfile.mac -e .env" command
-# $PORT environment variable must be present inside the .env file - i.e. PORT=9988
+# "PORT" environment variable must be present inside the .env file - i.e. PORT=9988
 # "-Dswarm.http.port=$PORT" sets the HTTP port to be used by Undertow web server
 # "-Djava.net.preferIPv4Stack=true -Djava.net.preferIPv6Addresses=false" ensures Undertow can run on OS using IPv6 instead of IPv4
 # "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=9999" instructs a debugger to attach to the running JVM process using port 9999
