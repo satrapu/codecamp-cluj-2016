@@ -7,7 +7,7 @@ import javax.ejb.Singleton;
  * Provides access to environment variables.
  */
 @Singleton
-public class EnvironmentProvider {
+public class EnvironmentService {
   private static final String ENV_PIPELINE_STAGE = "PIPELINE_STAGE";
   private String pipelineStage;
 
@@ -17,7 +17,7 @@ public class EnvironmentProvider {
   }
 
   /**
-   * Gets the value of the {@value EnvironmentProvider#ENV_PIPELINE_STAGE} environment variable.
+   * Gets the value of the {@value EnvironmentService#ENV_PIPELINE_STAGE} environment variable.
    */
   public String getPipelineStage() {
     return pipelineStage;
