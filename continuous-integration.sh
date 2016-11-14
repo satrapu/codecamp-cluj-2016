@@ -7,7 +7,7 @@ MAVEN_VERSION=${MAVEN_VERSION-${DEFAULT_MAVEN_VERSION}}
 echo "MAVEN_VERSION=${MAVEN_VERSION}"
 
 # get MAVEN_PROFILE or default value
-DEFAULT_MAVEN_PROFILE=local
+DEFAULT_MAVEN_PROFILE=heroku
 MAVEN_PROFILE=${MAVEN_PROFILE-${DEFAULT_MAVEN_PROFILE}}
 echo "MAVEN_PROFILE=${MAVEN_PROFILE}"
 
@@ -50,5 +50,5 @@ echo "Maven has been installed into folder: ${MAVEN_HOME}"
 ### -q: show only error messages
 ### -P<MAVEN_PROFILE_NAME>: use Maven profile identified by <MAVEN_PROFILE_NAME>
 echo "Building application using Maven profile: ${MAVEN_PROFILE} ..."
-${MAVEN_HOME}/bin/mvn -q package -P${MAVEN_PROFILE}
+${MAVEN_HOME}/bin/mvn -q compile test -P${MAVEN_PROFILE}
 echo "Application has been built"
