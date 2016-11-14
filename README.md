@@ -53,6 +53,9 @@ https://codecamp-cluj-2016.herokuapp.com/
   * Official Site: http://www.oracle.com/technetwork/java/javaee/overview/index.html
   * JEE7 Tutorial: https://docs.oracle.com/javaee/7/tutorial/
   * Ticket Monster: http://developers.redhat.com/ticket-monster
+  * Alternatives:
+    * Spring: https://spring.io/
+    * Others
 * Flyway
     * Official Site: https://flywaydb.org/
     * Documentation: https://flywaydb.org/documentation/
