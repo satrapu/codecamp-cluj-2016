@@ -32,10 +32,10 @@ https://codecamp-cluj-2016.herokuapp.com/
   * Heroku CLI: https://devcenter.heroku.com/categories/command-line/
   * Error Codes: https://devcenter.heroku.com/articles/error-codes/
   * Java on Heroku: https://devcenter.heroku.com/categories/java/
-    * Customize Maven: https://github.com/heroku/heroku-buildpack-java#customize-maven/
+    * Customize Maven: https://github.com/heroku/heroku-buildpack-java#customize-maven
     * Heroku Java Support: https://devcenter.heroku.com/articles/java-support/  
   * PostgreSQL on Heroku: https://devcenter.heroku.com/categories/heroku-postgres/
-    * Connecting in Java: https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-java/
+    * Connecting in Java: https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-java
   * Alternatives:
     * Red Hat OpenShift: https://www.openshift.com/  
     * IBM Blue Mix: http://www.ibm.com/cloud-computing/bluemix/
