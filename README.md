@@ -46,7 +46,7 @@ https://codecamp-cluj-2016.herokuapp.com/
     * Generator: http://wildfly-swarm.io/generator/
     * Just Enough App Server with WildFly Swarm presentation by Antonio Goncalves: https://antoniogoncalves.org/2016/07/13/just-enough-app-server-with-wildfly-swarm/
     * Alternatives:
-      * Payara Micro: http://www.payara.fish/payara_micro/
+      * Payara Micro: http://www.payara.fish/payara_micro
       * Spring Boot: http://projects.spring.io/spring-boot/
       * Others
 * Java Enterprise Edition 7
