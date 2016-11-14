@@ -65,6 +65,7 @@ https://codecamp-cluj-2016.herokuapp.com/
     * Alternatives:
         * CircleCI: https://circleci.com/
         * Semaphore: https://semaphoreci.com/
+        * Others
         
 <a name="heroku-cli-commands">Useful Heroku CLI commands</a>
 --
