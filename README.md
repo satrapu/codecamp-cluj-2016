@@ -64,7 +64,7 @@ https://codecamp-cluj-2016.herokuapp.com/
     * Documentation: https://docs.snap-ci.com/
     * Alternatives:
         * CircleCI: https://circleci.com/
-        * drone.io: https://drone.io/
+        * Semaphore: https://semaphoreci.com/
         
 <a name="heroku-cli-commands">Useful Heroku CLI commands</a>
 --
