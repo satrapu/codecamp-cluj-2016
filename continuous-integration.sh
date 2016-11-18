@@ -50,7 +50,7 @@ echo "Maven has been installed into folder: ${MAVEN_HOME}"
 ### -q: show only error messages
 ### -P<MAVEN_PROFILE_NAME>: use Maven profile identified by <MAVEN_PROFILE_NAME>
 echo "Building application using Maven profile: ${MAVEN_PROFILE} ..."
-${MAVEN_HOME}/bin/mvn -q compile test -P${MAVEN_PROFILE}
+${MAVEN_HOME}/bin/mvn -q compile test -P${MAVEN_PROFILE} -s settings.xml
 
 # check whether Maven was able to build the application or not
 MAVEN_OUTCOME=$?
