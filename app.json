@@ -1,0 +1,29 @@
+{
+  "name": "codecamp-cluj-2016",
+  "scripts": {
+  },
+  "env": {
+    "MAVEN_CUSTOM_GOALS": {
+      "required": true
+    },
+    "MAVEN_CUSTOM_OPTS": {
+      "required": true
+    },
+    "PIPELINE_STAGE": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/java"
+    }
+  ]
+}
