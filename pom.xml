@@ -68,34 +68,6 @@
     <environment>local</environment>
   </properties>
 
-  <!--
-   Configure Maven to use repo1 instead of repo in order
-   to avoid issue: https://issues.sonatype.org/browse/MVNCENTRAL-1369.
-   Applied the fix recommended here: http://stackoverflow.com/a/40683298.
-  -->
-  <repositories>
-    <repository>
-      <id>central</id>
-      <name>Maven Central Repository</name>
-      <url>http://repo1.maven.org/maven2</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>central</id>
-      <name>Maven Plugin Repository</name>
-      <url>http://repo1.maven.org/maven2</url>
-      <layout>default</layout>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-    </pluginRepository>
-  </pluginRepositories>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
