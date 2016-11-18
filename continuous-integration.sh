@@ -60,3 +60,5 @@ if [ ${MAVEN_OUTCOME} -eq 0 ]; then
 else
   echo "Build failed"
 fi
+
+exit ${MAVEN_OUTCOME}
