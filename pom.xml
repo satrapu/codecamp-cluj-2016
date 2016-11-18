@@ -18,8 +18,8 @@
   <inceptionYear>2016</inceptionYear>
 
   <ciManagement>
-    <system>drone.io</system>
-    <url>https://drone.io/github.com/satrapu/codecamp-cluj-2016</url>
+    <system>Snap CI</system>
+    <url>https://snap-ci.com/satrapu/codecamp-cluj-2016/</url>
   </ciManagement>
 
   <scm>
