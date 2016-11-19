@@ -27,6 +27,7 @@ https://codecamp-cluj-2016.herokuapp.com/
   * Limits: https://devcenter.heroku.com/articles/limits/
   * Elements: https://elements.heroku.com/
   * Buildpacks: https://devcenter.heroku.com/articles/buildpacks/
+    * Java Buildpack: https://github.com/heroku/heroku-buildpack-java/ 
   * Deployment: https://devcenter.heroku.com/categories/deployment/
   * Pipelines: https://devcenter.heroku.com/articles/pipelines/
   * Heroku CLI: https://devcenter.heroku.com/categories/command-line/
