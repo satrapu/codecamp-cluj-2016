@@ -1,7 +1,8 @@
 # Codecamp - Cluj-Napoca - 2016
 **Table of Contents**  
 - [Description](#description)  
-- [Presentation Slides](#slides)  
+- [Presentation Slides](#photos)  
+- [Event Photos](#slides)  
 - [Continuous Integration](#ci)  
 - [Live Application](#live-application)  
 - [References](#references)  
@@ -14,6 +15,10 @@ This repo contains the source code of a JEE 7 web application used during the "C
 <a name="slides">Presentation Slides</a>
 -- 
 * SlideShare: http://www.slideshare.net/satrapu/creating-a-cicd-pipeline-for-a-java-ee-application-in-the-cloud
+
+<a name="photos">Event Photos</a>
+-- 
+* Facebook: https://www.facebook.com/CodecampRO/photos/?tab=album&album_id=1142617649109328
 
 <a name="ci">Continuous Integration</a>
 --
