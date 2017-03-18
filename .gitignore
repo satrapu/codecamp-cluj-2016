@@ -7,3 +7,6 @@
 
 # Heroku
 /.env
+
+# NetBeans
+/nb-configuration.xml
