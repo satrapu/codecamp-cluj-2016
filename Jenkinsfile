@@ -27,5 +27,11 @@ pipeline {
                 }
             }
         }
+
+        stage('Cleanup') {
+            steps {
+                cleanWs notFailBuild: true
+            }
+        }
     }
 }
