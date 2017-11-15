@@ -7,15 +7,24 @@ pipeline {
     }
 
     stages {
-        stage('Compile') {
+        stage ('Compile') {
             steps {
-                echo 'Compiling...'
+                sh 'mvn clean compile' 
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing...'
+                sh 'mvn test' 
+            }
+            
+            post {
+                success {
+                    junit ([
+                        allowEmptyResults: true, 
+                        testResults: 'target/surefire-reports/**/*.xml' 
+                    ])
+                }
             }
         }
     }
