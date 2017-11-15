@@ -1,6 +1,8 @@
 # Codecamp - Cluj-Napoca - 2016
 **Table of Contents**  
 - [Description](#description)  
+- [Presentation Slides](#photos)  
+- [Event Photos](#slides)  
 - [Continuous Integration](#ci)  
 - [Live Application](#live-application)  
 - [References](#references)  
@@ -9,6 +11,14 @@
 <a name="description">Description</a>
 --
 This repo contains the source code of a JEE 7 web application used during the "Creating a CI/CD pipeline for a Java EE application in the cloud" session at [Codecamp Cluj-Napoca](http://cluj.codecamp.ro/) IT event, which took place in Cluj-Napoca on November 19th, 2016.  
+
+<a name="slides">Presentation Slides</a>
+-- 
+* SlideShare: http://www.slideshare.net/satrapu/creating-a-cicd-pipeline-for-a-java-ee-application-in-the-cloud
+
+<a name="photos">Event Photos</a>
+-- 
+* Facebook: https://www.facebook.com/CodecampRO/photos/?tab=album&album_id=1142617649109328
 
 <a name="ci">Continuous Integration</a>
 --
