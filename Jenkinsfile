@@ -13,7 +13,20 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Static Code Analysis') {
+            // Perform static code analysis via SonarCloud.
+            // See more here: https://about.sonarcloud.io/get-started/.
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'service.sonar', passwordVariable: 'SONAR_PASSWORD', usernameVariable: 'SONAR_USERNAME')]) {
+                    sh 'mvn org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar \
+                            -Dsonar.host.url=https://sonarcloud.io \
+                            -Dsonar.organization=$SONAR_USERNAME \
+                            -Dsonar.login=$SONAR_PASSWORD'
+                }
+            }
+        }
+
+        stage('Tests') {
             steps {
                 sh 'mvn test' 
             }
