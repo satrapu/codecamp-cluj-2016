@@ -6,6 +6,19 @@ pipeline {
         jdk 'oracle-jdk-8u152' 
     }
 
+    options { 
+        timestamps ()
+        buildDiscarder (
+            logRotator (
+                artifactDaysToKeepStr: '',
+                artifactNumToKeepStr: '',
+                daysToKeepStr: '',
+                // Keep no more than a given number of builds
+                numToKeepStr: '5'
+            )
+        ) 
+    }
+
     stages {
         stage ('Compile') {
             steps {
