@@ -7,7 +7,12 @@ pipeline {
     }
 
     options { 
+        // Always build one branch at a time
+        disableConcurrentBuilds()
+
+        // Display timestamps at the begining of each build log line
         timestamps ()
+
         buildDiscarder (
             logRotator (
                 artifactDaysToKeepStr: '',
