@@ -13,6 +13,7 @@ node {
             pipelineTriggers([])
         ])
 
+        // Prepare Maven v3.5.2
         def mvnHome = tool 'maven-3.5.2'
         def mvn = "${mvnHome}/bin/mvn"
     
@@ -30,16 +31,26 @@ node {
 
         stage('Static Code Analysis'){
             // Perform static code analysis via SonarCloud.
-            // See more here: https://about.sonarcloud.io/get-started/.
+            // See more here: 
+            //  - https://about.sonarcloud.io/get-started/
+            //  - https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+Maven
+            //  - https://docs.sonarqube.org/display/SONAR/Analysis+Parameters
             withCredentials([
                 usernamePassword(
                     credentialsId: 'service.sonar', 
                     passwordVariable: 'SONAR_PASSWORD', 
                     usernameVariable: 'SONAR_USERNAME')]){
-                        sh "${mvn} org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar \
-                                -Dsonar.host.url=https://sonarcloud.io \
-                                -Dsonar.organization=$SONAR_USERNAME \
-                                -Dsonar.login=$SONAR_PASSWORD"
+                        sh "${mvn} org.sonarsource.scanner.maven:sonar-maven-plugin:3.4.0.905:sonar \
+                                   -Dsonar.analysis.mode=preview \
+                                   -Dsonar.issuesReport.console.enable=true \
+                                   -Dsonar.issuesReport.html.enable=true \
+                                   -Dsonar.host.url=https://sonarcloud.io \
+                                   -Dsonar.organization=$SONAR_USERNAME \
+                                   -Dsonar.login=$SONAR_PASSWORD \
+                                   -Dsonar.projectKey=ro.satrapu:codecamp.cj.2016 \
+                                   -Dsonar.sources=. \
+                                   -Dsonar.exclusions=**/*.class,**/*.sh,**/Procfile*,**/Jenkinsfile \
+                                   -Dsonar.sourceEncoding=UTF-8"
                     }
 
             // Since there is no Sonar report generated inside the current Jenkins workspace,
